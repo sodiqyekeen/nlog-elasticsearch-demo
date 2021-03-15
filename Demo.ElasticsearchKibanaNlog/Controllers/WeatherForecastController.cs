@@ -26,6 +26,7 @@ namespace Demo.ElasticsearchKibanaNlog.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("About to get weather forecasts.");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
